@@ -1,2 +1,2 @@
-### System :  Arch
+### System : EOS ( Arch )
 ### DE :  XFCE
