@@ -1,3 +1,3 @@
-DE : XFCE
+DE :  XFCE
 
-OS : Endeavour OS
+OS :  Endeavour OS
