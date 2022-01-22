@@ -1,3 +1,2 @@
+### System :  Arch
 ### DE :  XFCE
-
-### OS :  Endeavour
