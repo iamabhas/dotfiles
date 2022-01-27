@@ -1,0 +1,216 @@
+[colors]
+dark = #bd93f9
+pink = #ff79c6
+gray = #44475a
+green = #50fa7b
+comment-gray = #6272a4
+bg = #00
+bg-alt = #20212C
+fg = #ff79c6
+fg-alt = #5D5E72
+yellow = #E6D80B
+red = #ff5555
+black = #000000
+
+trans = #00000000
+semi-trans-black = #cc000000
+
+shade-1 = #32344a
+shade-2 = #444b6a
+shade-3 = #787c99
+shade-4 = #CACACE
+shade-5 = #acb0d0
+
+[bar/main]
+width = 100%
+height = 22
+offset-y = 0
+top = true
+fixed-center = true
+
+;wm-restack = bspwm
+
+override-redirect = false
+
+scroll-up = next
+scroll-down = prev
+
+enable-ipc = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+font-0 = "JetBrains Mono Nerd Font:style=Medium:size=11;2"
+font-1 = "JetBrains Mono Nerd Font:style=Bold:size=11;2"
+font-2 = "JetBrainsMono Nerd Font:size=19;5"
+font-3 = "Material Icons Outlined:9;4"
+font-4 = "Material Icons Round:9;4"
+font-5 = "Source Han Sans CN:size=9;2"
+
+tray-position = right
+tray-background = ${colors.background}
+modules-left = bspw i3  
+modules-center =  
+modules-right =  wlan pulseaudio battery date 
+
+cursor-click = pointer
+
+[settings]
+screenchange-reload = true
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+format-charging =  <label-charging>
+label-charging = %percentage:2%%
+format-foreground = ${colors.fg}
+format-charging-padding = 1
+format-charging-foreground = ${colors.fg}
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+format-discharging-foreground = ${colors.foreground}
+format-full-prefix = "  "
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-0-foreground = ${colors.fg}
+animation-charging-framerate = 910
+format-discharging-padding = 1
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+label-focused = %index%
+label-focused-foreground = ${colors.shade-5}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-foreground = ${colors.shade-3}
+label-occupied-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.shade-1}
+label-empty-padding = 2
+
+[module/date]
+type = internal/date
+interval = 1
+
+time = "%a, %b %d %H:%M"
+
+format = <label>
+format-foreground = ${colors.pink}
+format-background = ${colors.bg}
+format-padding = 1
+format-prefix = %{T5}%{T-}
+label = %{T1}%time%%{T-}
+label-padding = 1
+
+[module/margin]
+type = custom/text
+
+content = %{T2}%{T-}
+content-foreground = ${colors.bg}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+
+format-volume = <label-volume>
+format-volume-padding = 1
+format-volume-prefix = %{T4}%{T-}
+format-volume-prefix-foreground = ${colors.pink}
+label-volume = %{T1}%percentage%%%{T-}
+label-volume-foreground = ${colors.pink}
+label-volume-padding = 1
+
+format-muted = <label-muted>
+format-muted-padding = 1
+format-muted-prefix = 
+format-muted-prefix-foreground = ${colors.fg}
+label-muted = %{T1}%percentage%%%{T-}
+label-muted-foreground = ${colors.fg}
+label-muted-padding = 1
+
+click-right = pavucontrol&
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 1.0
+
+
+format-connected = <label-connected>
+format-connected-padding = 1
+label-connected = %{A1:wifimenu:} %essid%%{A}
+label-connected-foreground = ${colors.fg}
+label-connected-padding = 1
+
+format-disconnected = <label-disconnected>
+format-disconnected-padding = 1
+label-disconnected = %{A1:wifimenu:}%{A}
+label-disconnected-foreground = ${colors.fg}
+label-disconnected-padding = 1
+
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+ws-icon-0 = 
+ws-icon-1 =  
+ws-icon-2 =  
+ws-icon-3 =  
+ws-icon-4 =  
+ws-icon-5 = 
+ws-icon-6 = 
+ws-icon-7 = 
+;ws-icon-default = 
+ws-icon-default = 
+
+
+fuzzy-match = true
+
+strip-wsnumbers = true
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = ${colors.pink}
+label-mode-background = ${colors.bg}
+
+; focused = Active workspace on focused monitor
+label-focused = %icon% %name%
+label-focused-background = ${colors.bg}
+label-focused-underline= ${colors.pink}
+label-focused-foreground= ${colors.pink}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-unfocused-background = ${colors.bg}
+label-unfocused-foreground = ${colors.pink}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-foreground = ${self.label-focused-foreground}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+ label-separator = |
