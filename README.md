@@ -11,7 +11,7 @@
 
 ![xfce](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot1.png)
 
-### neovim screenshot :
+### neovim :
 
 ![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot2.png)
 
