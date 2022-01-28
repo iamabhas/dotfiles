@@ -2,9 +2,18 @@
 
 ### System : EOS ( Arch )
 
-### xfce rice screenshots :
 
-![screenshot1](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot1.png)
+### i3 and polybar :
 
-### font to download : [iosevka nf](https://www.nerdfonts.com/font-downloads)
+
+
+### xfce :
+
+![xfce](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot1.png)
+
+### neovim screenshot :
+
+![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot2.png)
+
+### fonts to download : [iosevka nf](https://www.nerdfonts.com/font-downloads)
 
