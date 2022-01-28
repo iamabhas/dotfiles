@@ -182,15 +182,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-0 = 
-ws-icon-1 =  
-ws-icon-2 =  
-ws-icon-3 =  
-ws-icon-4 =  
-ws-icon-5 = 
-ws-icon-6 = 
-ws-icon-7 = 
-;ws-icon-default = 
+
 ws-icon-default = 
 
 
