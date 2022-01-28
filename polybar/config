@@ -1,19 +1,22 @@
 [colors]
-dark = #bd93f9
-pink = #ff79c6
-gray = #44475a
-green = #50fa7b
-comment-gray = #6272a4
-bg = #00
-bg-alt = #20212C
-fg = #ff79c6
-fg-alt = #5D5E72
-yellow = #E6D80B
+background = #282a36
+foreground = #f8f8f2
+black = #3B4252
 red = #ff5555
-black = #000000
-
-trans = #00000000
-semi-trans-black = #cc000000
+green = #50fa7b
+yellow = #f1fa8c
+blue = #bd93f9
+magenta = #ff79c6
+cyan = #88C0D0
+white = #E5E9F0
+altblack = #4C566A
+altred = #BF616A
+altgreen = #A3BE8C
+altyellow = #EBCB8B
+altblue = #81A1C1
+altmagenta = #B48EAD
+altcyan = #8FBCBB
+altwhite = #ECEFF4
 
 shade-1 = #32344a
 shade-2 = #444b6a
@@ -37,8 +40,8 @@ scroll-down = prev
 
 enable-ipc = true
 
-background = ${colors.bg}
-foreground = ${colors.fg}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 font-0 = "JetBrains Mono Nerd Font:style=Medium:size=11;2"
 font-1 = "JetBrains Mono Nerd Font:style=Bold:size=11;2"
@@ -46,12 +49,13 @@ font-2 = "JetBrainsMono Nerd Font:size=19;5"
 font-3 = "Material Icons Outlined:9;4"
 font-4 = "Material Icons Round:9;4"
 font-5 = "Source Han Sans CN:size=9;2"
+font-6 = "Iosevka Nerd Font:size=18;4"
 
-tray-position = right
-tray-background = ${colors.background}
-modules-left = bspw i3  
+tray-position = left
+tray-background = ${colors.altblack}
+modules-left = BPL battery BGPL 
 modules-center =  
-modules-right =  wlan pulseaudio battery date 
+modules-right =  RPL pulseaudio YPL bspw i3 GPL wlan MPL date 
 
 cursor-click = pointer
 
@@ -65,19 +69,26 @@ adapter = ADP1
 full-at = 98
 format-charging =  <label-charging>
 label-charging = %percentage:2%%
-format-foreground = ${colors.fg}
+format-foreground = ${colors.background}
+format-background = ${colors.blue}
 format-charging-padding = 1
-format-charging-foreground = ${colors.fg}
+format-charging-foreground = ${colors.background}
+format-charging-background = ${colors.blue}
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-format-discharging-foreground = ${colors.foreground}
+format-discharging-foreground = ${colors.background}
+format-discharging-background = ${colors.blue}
 format-full-prefix = "  "
+format-full-foreground = ${colors.background}
+format-full-background = ${colors.blue}
+format-full-padding = 1
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
-ramp-capacity-0-foreground = ${colors.fg}
+ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-0-background = ${colors.blue}
 animation-charging-framerate = 910
 format-discharging-padding = 1
 
@@ -105,8 +116,8 @@ interval = 1
 time = "%a, %b %d %H:%M"
 
 format = <label>
-format-foreground = ${colors.pink}
-format-background = ${colors.bg}
+format-foreground = ${colors.background}
+format-background = ${colors.magenta}
 format-padding = 1
 format-prefix = %{T5}%{T-}
 label = %{T1}%time%%{T-}
@@ -116,27 +127,31 @@ label-padding = 1
 type = custom/text
 
 content = %{T2}%{T-}
-content-foreground = ${colors.bg}
+content-foreground = ${colors.background}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 use-ui-max = false
 
 format-volume = <label-volume>
-format-volume-padding = 1
+format-volume-padding = 0
 format-volume-prefix = %{T4}%{T-}
-format-volume-prefix-foreground = ${colors.pink}
+format-volume-prefix-foreground = ${colors.background}
+format-volume-prefix-background = ${colors.red}
 label-volume = %{T1}%percentage%%%{T-}
-label-volume-foreground = ${colors.pink}
-label-volume-padding = 1
+label-volume-foreground = ${colors.background}
+label-volume-background = ${colors.red}
+label-volume-padding = 0
 
 format-muted = <label-muted>
-format-muted-padding = 1
+format-muted-padding = 0
 format-muted-prefix = 
-format-muted-prefix-foreground = ${colors.fg}
+format-muted-prefix-foreground = ${colors.background}
+format-muted-prefix-background = ${colors.red}
 label-muted = %{T1}%percentage%%%{T-}
-label-muted-foreground = ${colors.fg}
-label-muted-padding = 1
+label-muted-foreground = ${colors.background}
+label-muted-background = ${colors.red}
+label-muted-padding = 0
 
 click-right = pavucontrol&
 
@@ -147,16 +162,18 @@ interval = 1.0
 
 
 format-connected = <label-connected>
-format-connected-padding = 1
+format-connected-padding = 0
 label-connected = %{A1:wifimenu:} %essid%%{A}
-label-connected-foreground = ${colors.fg}
-label-connected-padding = 1
+label-connected-foreground = ${colors.background}
+label-connected-background = ${colors.green}
+label-connected-padding = 0
 
 format-disconnected = <label-disconnected>
-format-disconnected-padding = 1
+format-disconnected-padding = 0
 label-disconnected = %{A1:wifimenu:}%{A}
-label-disconnected-foreground = ${colors.fg}
-label-disconnected-padding = 1
+label-disconnected-foreground = ${colors.background}
+label-disconnected-background = ${colors.green}
+label-disconnected-padding = 0
 
 
 [module/i3]
@@ -183,22 +200,22 @@ strip-wsnumbers = true
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
-label-mode-foreground = ${colors.pink}
-label-mode-background = ${colors.bg}
+label-mode-padding = 1
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.yellow}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
-label-focused-background = ${colors.bg}
-label-focused-underline= ${colors.pink}
-label-focused-foreground= ${colors.pink}
-label-focused-padding = 2
+label-focused-background = ${colors.yellow}
+label-focused-underline= ${colors.foreground}
+label-focused-foreground= ${colors.background}
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-padding = 2
-label-unfocused-background = ${colors.bg}
-label-unfocused-foreground = ${colors.pink}
+label-unfocused-padding = 1
+label-unfocused-background = ${colors.yellow}
+label-unfocused-foreground = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -209,8 +226,207 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-background = ${colors.red}
+label-urgent-padding = 1
 
 ; Separator in between workspaces
  label-separator = |
+ label-separator-background = ${colors.yellow}
+ label-separator-foreground = ${colors.background}
+
+
+ [module/spacing]
+type = custom/text
+content = " "
+content-background = ${color.background}
+
+[module/sep]
+type = custom/text
+content = -
+
+content-background = ${color.background}
+content-foreground = ${color.background}
+
+[module/dot]
+type = custom/text
+;content = 
+content = ""
+
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+content-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+
+[module/RD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.red}
+
+[module/RRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.red}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/WLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.white}
+
+[module/WRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.white}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/CLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.cyan}
+
+[module/CRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.cyan}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/MLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.magenta}
+
+[module/MRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.magenta}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/YLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.yellow}
+
+[module/YRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.yellow}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/GLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.green}
+
+[module/GRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.green}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/BLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${color.background}
+content-foreground = ${color.blue}
+
+[module/BRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.background}
+content-foreground = ${colors.blue}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/YPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.red}
+content-foreground = ${colors.yellow}
+
+[module/GPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.yellow}
+content-foreground = ${colors.green}
+
+[module/RPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.background}
+content-foreground = ${colors.red}
+
+[module/MPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.green}
+content-foreground = ${colors.magenta}
+
+[module/BPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.altblack}
+content-foreground = ${colors.blue}
+
+[module/BGPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.blue}
+content-foreground = ${colors.background}
