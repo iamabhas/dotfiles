@@ -5,7 +5,7 @@
 
 ### i3 and polybar :
 
-![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/i3polybar.png)
+![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot4.png)
 
 ### xfce :
 
