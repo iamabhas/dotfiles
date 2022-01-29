@@ -201,7 +201,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-default = 
+ws-icon-default = 
 
 fuzzy-match = true
 
@@ -221,9 +221,9 @@ label-focused-foreground= ${colors.background}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
+label-unfocused = %icon% %name%
 label-unfocused-padding = 1
-label-unfocused-background = ${colors.blue}
+label-unfocused-background = ${colors.cyan}
 label-unfocused-foreground = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
@@ -234,8 +234,9 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = !%index%
 label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.background}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
