@@ -18,6 +18,9 @@ blue = #bd93f9
 magenta = #ff79c6
 cyan = #88C0D0
 white = #E5E9F0
+
+;; _-_-_-_-_-_-_-_- Colors which arent from dracula theme _-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 altblack = #4C566A
 altred = #BF616A
 altgreen = #A3BE8C
@@ -26,6 +29,9 @@ altblue = #81A1C1
 altmagenta = #B48EAD
 altcyan = #8FBCBB
 altwhite = #ECEFF4
+
+inactive-red = #C70039
+tray-bg = #2e7fa5
 
 shade-1 = #32344a
 shade-2 = #444b6a
@@ -43,15 +49,7 @@ top = true
 fixed-center = true
 
 
-;; _-_-_-_-_-_-_-_- Border -_-_-_-_-_-_-_-_-_-_-_-_-_
-
-border-size = 1
-border-bottom-color = ${colors.black}
-
-;; _-_-_-_-_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_-_
-
-
-;wm-restack = bspwm
+;wm-restack = i3
 
 override-redirect = false
 
@@ -60,7 +58,7 @@ scroll-down = prev
 
 enable-ipc = true
 
-background = ${colors.background}
+background = ${colors.black}
 foreground = ${colors.foreground}
 
 ;; _-_-_-_-_-_-_-_- Fonts -_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -76,7 +74,7 @@ font-6 = "Iosevka Nerd Font:size=18;4"
 ;; _-_-_-_-_-_-_-_-_-_ Modules / Tray positions _-_-_-_-_-_-_-_-_-_-_-_
 
 tray-position = left
-tray-background = ${colors.background}
+tray-background = ${colors.tray-bg}
 modules-left = BPL i3 BGPL 
 modules-center =  
 modules-right =  RPL pulseaudio YPL battery GPL wlan MPL date 
@@ -223,8 +221,8 @@ label-focused-padding = 1
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon% %name%
 label-unfocused-padding = 1
-label-unfocused-background = ${colors.cyan}
-label-unfocused-foreground = ${colors.background}
+label-unfocused-background = ${colors.blue}
+label-unfocused-foreground = ${colors.inactive-red}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -236,7 +234,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = !%index%
 label-urgent-background = ${colors.red}
-label-urgent-foreground = ${colors.background}
+label-urgent-foreground = ${colors.black}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
@@ -418,7 +416,7 @@ content-foreground = ${colors.green}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.background}
+content-background = ${colors.black}
 content-foreground = ${colors.red}
 
 [module/MPL]
@@ -432,7 +430,7 @@ content-foreground = ${colors.magenta}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.background}
+content-background = ${colors.tray-bg}
 content-foreground = ${colors.blue}
 
 [module/BGPL]
@@ -440,4 +438,4 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
 content-background = ${colors.blue}
-content-foreground = ${colors.background}
+content-foreground = ${colors.black}
