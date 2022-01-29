@@ -42,6 +42,15 @@ offset-y = 0
 top = true
 fixed-center = true
 
+
+;; _-_-_-_-_-_-_-_- Border -_-_-_-_-_-_-_-_-_-_-_-_-_
+
+border-size = 1
+border-bottom-color = ${colors.black}
+
+;; _-_-_-_-_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
 ;wm-restack = bspwm
 
 override-redirect = false
