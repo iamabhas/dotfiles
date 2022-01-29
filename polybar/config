@@ -52,10 +52,10 @@ font-5 = "Source Han Sans CN:size=9;2"
 font-6 = "Iosevka Nerd Font:size=18;4"
 
 tray-position = left
-tray-background = ${colors.altblack}
-modules-left = BPL battery BGPL 
+tray-background = ${colors.background}
+modules-left = BPL i3 BGPL 
 modules-center =  
-modules-right =  RPL pulseaudio YPL bspw i3 GPL wlan MPL date 
+modules-right =  RPL pulseaudio YPL battery GPL wlan MPL date 
 
 cursor-click = pointer
 
@@ -70,27 +70,27 @@ full-at = 98
 format-charging =  <label-charging>
 label-charging = %percentage:2%%
 format-foreground = ${colors.background}
-format-background = ${colors.blue}
-format-charging-padding = 1
+format-background = ${colors.yellow}
+format-charging-padding = 0
 format-charging-foreground = ${colors.background}
-format-charging-background = ${colors.blue}
+format-charging-background = ${colors.yellow}
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
 format-discharging-foreground = ${colors.background}
-format-discharging-background = ${colors.blue}
+format-discharging-background = ${colors.yellow}
 format-full-prefix = "  "
 format-full-foreground = ${colors.background}
-format-full-background = ${colors.blue}
-format-full-padding = 1
+format-full-background = ${colors.yellow}
+format-full-padding = 0
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
 ramp-capacity-0-foreground = ${colors.red}
-ramp-capacity-0-background = ${colors.blue}
+ramp-capacity-0-background = ${colors.yellow}
 animation-charging-framerate = 910
-format-discharging-padding = 1
+format-discharging-padding = 0
 
 [module/bspwm]
 type = internal/bspwm
@@ -194,11 +194,11 @@ strip-wsnumbers = true
 
 label-mode-padding = 1
 label-mode-foreground = ${colors.background}
-label-mode-background = ${colors.yellow}
+label-mode-background = ${colors.blue}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
-label-focused-background = ${colors.yellow}
+label-focused-background = ${colors.blue}
 label-focused-underline= ${colors.foreground}
 label-focused-foreground= ${colors.background}
 label-focused-padding = 1
@@ -206,7 +206,7 @@ label-focused-padding = 1
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-padding = 1
-label-unfocused-background = ${colors.yellow}
+label-unfocused-background = ${colors.blue}
 label-unfocused-foreground = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
@@ -223,7 +223,7 @@ label-urgent-padding = 1
 
 ; Separator in between workspaces
  label-separator = |
- label-separator-background = ${colors.yellow}
+ label-separator-background = ${colors.blue}
  label-separator-foreground = ${colors.background}
 
 
@@ -413,7 +413,7 @@ content-foreground = ${colors.magenta}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.altblack}
+content-background = ${colors.background}
 content-foreground = ${colors.blue}
 
 [module/BGPL]
