@@ -92,23 +92,6 @@ ramp-capacity-0-background = ${colors.yellow}
 animation-charging-framerate = 910
 format-discharging-padding = 0
 
-[module/bspwm]
-type = internal/bspwm
-
-format = <label-state> <label-mode>
-
-label-focused = %index%
-label-focused-foreground = ${colors.shade-5}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-foreground = ${colors.shade-3}
-label-occupied-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.shade-1}
-label-empty-padding = 2
-
 [module/date]
 type = internal/date
 interval = 1
