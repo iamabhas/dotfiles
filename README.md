@@ -5,7 +5,7 @@
 
 ### i3 and polybar :
 
-![i3](https://github.com/iamabhas/dotfiles/blob/main/screenshots/i3.png)
+![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/i3.png)
 
 ### xfce :
 
@@ -17,7 +17,7 @@
 
 ### firefox :
 
-![firefox](https://github.com/iamabhas/dotfiles/blob/main/screenshots/firefox.png)
+![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/firefox.png)
 
 ### fonts to download : [iosevka nf](https://www.nerdfonts.com/font-downloads)
 
