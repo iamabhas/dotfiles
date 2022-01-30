@@ -538,7 +538,7 @@ client.background       #F8F8F2
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-11' -p 'dmenu%'"
+#bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-12' -p 'dmenu%'"
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
@@ -553,3 +553,6 @@ bindsym $mod+t exec rofi -show window \
 
 #Polybar launch
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+#Place monitor in correct order
+bindsym $mod+Shift+m exec xrandr --output HDMI1 --auto --right-of eDP1
