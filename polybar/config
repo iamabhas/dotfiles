@@ -30,9 +30,6 @@ altmagenta = #B48EAD
 altcyan = #8FBCBB
 altwhite = #ECEFF4
 
-inactive-red = #C70039
-tray-bg = #2e7fa5
-
 shade-1 = #32344a
 shade-2 = #444b6a
 shade-3 = #787c99
@@ -74,7 +71,7 @@ font-6 = "Iosevka Nerd Font:size=18;4"
 ;; _-_-_-_-_-_-_-_-_-_ Modules / Tray positions _-_-_-_-_-_-_-_-_-_-_-_
 
 tray-position = left
-tray-background = ${colors.tray-bg}
+tray-background = #725AC1
 modules-left = BPL i3 BGPL 
 modules-center =  
 modules-right =  RPL pulseaudio YPL battery GPL wlan MPL date 
@@ -222,7 +219,7 @@ label-focused-padding = 1
 label-unfocused = %icon% %name%
 label-unfocused-padding = 1
 label-unfocused-background = ${colors.blue}
-label-unfocused-foreground = ${colors.inactive-red}
+label-unfocused-foreground = ${colors.altblack}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -430,7 +427,7 @@ content-foreground = ${colors.magenta}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.tray-bg}
+content-background = #725AC1
 content-foreground = ${colors.blue}
 
 [module/BGPL]
