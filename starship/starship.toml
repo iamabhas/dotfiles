@@ -1,12 +1,12 @@
 [line_break]
-disabled = false
+disabled = true
 
 command_timeout = 5000
 
 scan_timeout = 5000
 
 [character]
-success_symbol = "[⟶ ](bold green)" 
+#success_symbol = "[⟶ ](bold green)" 
 error_symbol = "[✗](bold red)" 
 
 [battery]
