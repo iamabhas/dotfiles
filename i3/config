@@ -461,8 +461,8 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused          #FF79C6 #6272A4 #F8F8F2 #FF79C6   #FF79C6
-client.focused_inactive #BD93F9  #44475A #F8F8F2 #BD93F9  #BD93F9 
+client.focused          #BD93F9 #6272A4 #F8F8F2 #BD93F9   #BD93F9
+client.focused_inactive #6272A4  #44475A #F8F8F2 #6272A4  #6272A4 
 client.unfocused        #6272A4 #282A36 #BFBFBF  #6272A4  #6272A4
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
@@ -538,7 +538,7 @@ client.background       #F8F8F2
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-#bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-12' -p 'dmenu%'"
+bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-12' -p 'dmenu%'"
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
