@@ -13,7 +13,7 @@
 
 ### neovim :
 
-![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot2.png)
+![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvim.png)
 
 ### firefox :
 
