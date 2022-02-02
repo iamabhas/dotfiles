@@ -425,14 +425,15 @@ content-foreground = ${colors.magenta}
 
 [module/BPL]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{T-}"
 content-font = 6
-content-background = #725AC1
-content-foreground = ${colors.blue}
+content-background = ${colors.blue}
+content-foreground = #725AC1
 
 [module/BGPL]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.blue}
-content-foreground = ${colors.black}
+content-background = ${colors.black}
+content-foreground = ${colors.blue}
+
