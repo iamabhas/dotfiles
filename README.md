@@ -1,20 +1,20 @@
-# xfce , i3 , polybar rice
+# i3 , polybar , xfce rice :
 
-### i3 and polybar :
+### POLYBAR :
 
-![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/polybar%2Bi3.png)
+![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/Polybar.png)
 
-### xfce :
+### XFCE :
 
 ![xfce](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/screenshot1.png)
 
-### neovim :
+### NEOVIM :
 
 ![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvim.png)
 
-### firefox :
+### FIREFOX :
 
 ![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/browser.png)
 
-### fonts to download : [iosevka nf](https://www.nerdfonts.com/font-downloads)
+### Fonts to Download : [Iosevka NF](https://www.nerdfonts.com/font-downloads)
 
