@@ -1,0 +1,14 @@
+-> yay -S pamac-aur 
+-> enter pamac and build vala-panel
+-> ( https://aur.archlinux.org/packages/vala-panel-appmenu-common-git/ )
+-> Go to PKGBUILD and disable budgie
+-> ( https://aur.archlinux.org/packages/vala-panel-appmenu-registrar-git )
+-> ( https://aur.archlinux.org/packages/appmenu-gtk-module-git/ )
+-> Build AUR packages in this order
+-> Activate AppMenu Plugin on panel
+-> Enter the following on terminal
+    - xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
+    - xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
+-> Also enter ( https://github.com/rilian-la-te/vala-panel-appmenu/tree/master/subprojects/appmenu-gtk-module -> xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module" ) !Do this twice if necessary meaning right after building appmenu and after those two commands above
+-> Configure AppMenu Plugin if necessary by going to panel preferences -> items -> click on appmenu plugin
+

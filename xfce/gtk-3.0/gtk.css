@@ -1,0 +1,25 @@
+VteTerminal, vte-terminal {
+    padding: 5px;
+}
+#clock-button { 
+    background-color: #ff79c6;
+    color: #282a36;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+#pulseaudio-button{
+    background-color: #50fa7b;
+    color: #282a36;
+    padding-left: 0.5rem;
+}
+#xfce4-power-manager-plugin{
+    background-color: #50fa7b;
+    color: #282a36;
+}
+#xfce4-notification-plugin{
+    background-color: #50fa7b;
+    color: #282a36;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    padding-right: 0.5rem;
+}
