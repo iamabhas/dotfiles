@@ -1,8 +1,5 @@
 # xfce , i3 , polybar rice
 
-### System : endeavour os ( arch )
-
-
 ### i3 and polybar :
 
 ![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/polybar%2Bi3.png)
