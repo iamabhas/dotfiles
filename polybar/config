@@ -16,7 +16,7 @@ green = #50fa7b
 yellow = #f1fa8c
 blue = #bd93f9
 magenta = #ff79c6
-cyan = #88C0D0
+cyan = #8be9fd
 white = #E5E9F0
 
 ;; _-_-_-_-_-_-_-_- Colors which arent from dracula theme _-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -73,8 +73,8 @@ font-6 = "Iosevka Nerd Font:size=18;4"
 tray-position = left
 tray-background = #725AC1
 modules-left = BPL i3 BGPL 
-modules-center =  
-modules-right =  RPL pulseaudio YPL battery GPL wlan MPL date 
+modules-center = 
+modules-right =  RPL pulseaudio CYPL backlight YPL battery GPL wlan MPL date 
 
 cursor-click = pointer
 
@@ -239,6 +239,40 @@ label-urgent-padding = 1
  label-separator-background = ${colors.blue}
  label-separator-foreground = ${colors.background}
 
+
+;; _-_-_-_-_-_-_-_-_- Brightness _-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+use-actual-brightness = true
+
+enable-scroll = true
+
+format = <ramp> <label>
+
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 =  
+ramp-1 =  
+ramp-2 =  
+ramp-3 =  
+ramp-4 =  
+ramp-5 =  
+ramp-6 =  
+ramp-7 =  
+ramp-8 =  
+ramp-9 =  
+
+format-foreground = ${colors.background}
+format-background = ${colors.cyan}
+
+
 ;;_-_-_-_-_-_-_-_- Decorations _-_-_-_-_-_-_-_-_-_-_-_-_-_
 
  [module/spacing]
@@ -399,7 +433,7 @@ content-foreground = ${colors.blue}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 6
-content-background = ${colors.red}
+content-background = ${colors.cyan}
 content-foreground = ${colors.yellow}
 
 [module/GPL]
@@ -436,4 +470,12 @@ content = "%{T3}%{T-}"
 content-font = 6
 content-background = ${colors.black}
 content-foreground = ${colors.blue}
+
+[module/CYPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 6
+content-background = ${colors.red}
+content-foreground = ${colors.cyan}
+
 
