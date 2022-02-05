@@ -5,7 +5,9 @@
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 
+
 ;; _-_-_-_-_-_-_-_ Colors (Dracula theme colors) -_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [colors]
 background = #282a36
@@ -19,7 +21,9 @@ magenta = #ff79c6
 cyan = #8be9fd
 white = #E5E9F0
 
+
 ;; _-_-_-_-_-_-_-_- Colors which arent from dracula theme _-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 altblack = #4C566A
 altred = #BF616A
@@ -36,7 +40,9 @@ shade-3 = #787c99
 shade-4 = #CACACE
 shade-5 = #acb0d0
 
+
 ;; _-_-_-_-_-_-_-_- Main Bar _-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [bar/main]
 width = 100%
@@ -58,7 +64,9 @@ enable-ipc = true
 background = ${colors.black}
 foreground = ${colors.foreground}
 
+
 ;; _-_-_-_-_-_-_-_- Fonts -_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 font-0 = "JetBrains Mono Nerd Font:style=Medium:size=11;2"
 font-1 = "JetBrains Mono Nerd Font:style=Bold:size=11;2"
@@ -72,18 +80,22 @@ font-6 = "Iosevka Nerd Font:size=18;4"
 
 tray-position = left
 tray-background = #725AC1
-modules-left = BPL i3 BGPL 
+modules-left = BPL i3 BGPL title 
 modules-center = 
 modules-right =  RPL pulseaudio CYPL backlight YPL battery GPL wlan MPL date 
 
 cursor-click = pointer
 
+
 ;; _-_-_-_-_-_-_-_-_ Settings -_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [settings]
 screenchange-reload = true
 
+
 ;; _-_-_-_-_-_-_-_ Battery -_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/battery]
 type = internal/battery
@@ -115,7 +127,9 @@ ramp-capacity-0-background = ${colors.yellow}
 animation-charging-framerate = 910
 format-discharging-padding = 0
 
+
 ;; _-_-_-_-_-_-_-_ Date/Time -_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/date]
 type = internal/date
@@ -137,7 +151,9 @@ type = custom/text
 content = %{T2}%{T-}
 content-foreground = ${colors.background}
 
+
 ;;_-_-_-_-_-_-_-_- Volume -_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -165,7 +181,9 @@ label-muted-padding = 0
 
 click-right = pavucontrol&
 
+
 ;;_-_-_-_-_-_-_-_-_  Wifi -_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/wlan]
 type = internal/network
@@ -189,6 +207,7 @@ label-disconnected-padding = 0
 
 
 ;;_-_-_-_-_-_-_-_-_ Workspaces -_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/i3]
 type = internal/i3
@@ -242,6 +261,7 @@ label-urgent-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_- Brightness _-_-_-_-_-_-_-_-_-_-_-_-_
 
+
 [module/backlight]
 type = internal/backlight
 
@@ -271,6 +291,22 @@ ramp-9 = 
 
 format-foreground = ${colors.background}
 format-background = ${colors.cyan}
+
+
+;; _-_-_-_-_-_-_-_-_ Active window title -_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/title]
+type = internal/xwindow
+
+format = <label>
+format-padding = 1
+format-foreground = ${colors.magenta}
+
+label = " %title%"
+label-maxlen = 30
+
+; Used instead of label when there is no window title
+label-empty = Desktop
 
 
 ;;_-_-_-_-_-_-_-_- Decorations _-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -477,5 +513,4 @@ content = "%{T3}%{T-}"
 content-font = 6
 content-background = ${colors.red}
 content-foreground = ${colors.cyan}
-
 
