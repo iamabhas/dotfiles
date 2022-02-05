@@ -17,7 +17,7 @@
 
 ### firefox :
 
-![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/firefox.png)
+![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/browser.png)
 
 ### fonts to download : [iosevka nf](https://www.nerdfonts.com/font-downloads)
 
