@@ -1,4 +1,4 @@
-# i3 , polybar , xfce rice :
+# i3 , polybar , xfce setup:
 
 ### POLYBAR :
 
