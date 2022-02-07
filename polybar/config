@@ -140,7 +140,7 @@ time = "%a, %b %d %H:%M"
 format = <label>
 format-foreground = ${colors.background}
 format-background = ${colors.magenta}
-format-padding = 1
+format-padding = 0
 format-prefix = %{T5}%{T-}
 label = %{T1}%time%%{T-}
 label-padding = 1
@@ -215,7 +215,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-default = 
+ws-icon-default = 
 
 fuzzy-match = true
 
@@ -287,7 +287,7 @@ ramp-5 = 
 ramp-6 =  
 ramp-7 =  
 ramp-8 =  
-ramp-9 =  
+ramp-9 = 
 
 format-foreground = ${colors.background}
 format-background = ${colors.cyan}
@@ -300,7 +300,7 @@ type = internal/xwindow
 
 format = <label>
 format-padding = 1
-format-foreground = ${colors.magenta}
+format-foreground = ${colors.foreground}
 
 label = " %title%"
 label-maxlen = 30
@@ -513,4 +513,5 @@ content = "%{T3}%{T-}"
 content-font = 6
 content-background = ${colors.red}
 content-foreground = ${colors.cyan}
+
 
