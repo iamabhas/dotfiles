@@ -16,7 +16,7 @@ discharging_symbol = ""
 
 [directory]
 format = "[$path]($style)[$read_only]($read_only_style) "
-style = "bold  #ffb86c"
+style = "bold  #50fa7b"
 read_only = "🔒"
 read_only_style = "red"
 
