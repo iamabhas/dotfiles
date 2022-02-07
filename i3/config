@@ -1,19 +1,20 @@
+
+#                                                .-.                 
+#   .-.                                         /    \   .-.         
+#  ( __)  .--.         .--.     .--.  ___ .-.   | .`. ; ( __) .--.   
+#  (''")/     \       /    \   /    \(   )   \  | |(___)(''")/    \  
+#   | |(___)`. |     |  .-. ; |  .-. ;|  .-. .  | |_     | |;  ,-. ' 
+#   | |   .-' /      |  |(___)| |  | || |  | | (   __)   | || |  | | 
+#   | |   '. \       |  |     | |  | || |  | |  | |      | || |  | | 
+#   | | ___ \ '      |  | ___ | |  | || |  | |  | |      | || |  | | 
+#   | |(   ) ; |     |  '(   )| '  | || |  | |  | |      | || '  | | 
+#   | | \ `-'  /     '  `-' | '  `-' /| |  | |  | |      | |'  `-' | 
+#  (___) ',__.'       `.__,'   `.__.'(___)(___)(___)    (___)`.__. | 
+#                                                            ( `-' ; 
+#                                                             `.__.  
+
+
 exec --no-startup-id ~/set_once.sh
-# This file is a modified version based on default i3-config-wizard config
-# source is available here:
-# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/master/.config/i3/config
-# Maintainer: joekamprad [joekamprad@endeavouros.com]
-# https://endeavouros.com
-#
-# iconic font icon search: https://fontawesome.com/v4.7/cheatsheet/
-#
-# --> to update this run the following command (will backup existing setup file)
-# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/config -P ~/.config/i3/
-#
-# Endeavouros-i3 config file
-# Source for complete framework of our i3 config and theming here: https://github.com/endeavouros-team/endeavouros-i3wm-setup
-# EndeavourOS wiki holds some Information also: https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
-# Please see http://i3wm.org/docs/userguide.html for the official i3 reference!
 
 #######################
 # config starts here: #
@@ -48,14 +49,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+new_window pixel 2
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+gaps inner 5
+gaps outer 2
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -116,7 +117,7 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 
 # move focused container to workspace with numpad keys
 bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
-bindcode $mod+Shift+Mod2+88 	move container to workspace  $ws2
+bindcode $mod+Shift+Mod2+88 	move container to worksace  $ws2
 bindcode $mod+Shift+Mod2+89 	move container to workspace  $ws3
 bindcode $mod+Shift+Mod2+83 	move container to workspace  $ws4
 bindcode $mod+Shift+Mod2+84 	move container to workspace  $ws5
@@ -190,7 +191,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
-bindsym F1 exec ~/.config/i3/scripts/keyhint-2
+bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
@@ -538,21 +539,22 @@ client.background       #F8F8F2
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-12' -p 'dmenu%'"
+#bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'JetBrainsMono Regular-12' -p #'dmenu%'"
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
-bindsym $mod+t exec rofi -show window \
+bindsym $mod+d exec rofi -show run \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-#bindsym F10 exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+t exec rofi -show emoji -modi emoji \
+		-config ~/.config/rofi/rofiemoji.rasi
+
+bindsym $mod+Shift+d exec rofi -show window \
+		-config ~/.config/rofi/rofidmenu.rasi
 
 #Polybar launch
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-#Place monitor in correct order
-bindsym $mod+Shift+m exec xrandr --output HDMI1 --auto --right-of eDP1
