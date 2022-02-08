@@ -49,14 +49,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 2
+new_window pixel 1
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 2
+gaps inner 6
+gaps outer 3
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -176,7 +176,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # exit-menu
-bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+bindsym $mod+Shift+q exec ~/.config/i3/scripts/powermenu
 
 # Lock the system
 # lock with a picture:
@@ -235,7 +235,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -544,12 +544,11 @@ client.background       #F8F8F2
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
-## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
 bindsym $mod+d exec rofi -show run \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-bindsym $mod+t exec rofi -show emoji -modi emoji \
+bindsym $mod+Shift+e exec rofi -show emoji -modi emoji \
 		-config ~/.config/rofi/rofiemoji.rasi
 
 bindsym $mod+Shift+d exec rofi -show window \
