@@ -15,7 +15,6 @@ window {
     border:           2;
     border-color:     @border-color;
     padding:          15;
-    width:            1000px;
 }
 listview {
     lines:                          10;
