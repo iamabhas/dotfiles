@@ -17,16 +17,15 @@ window {
     border:                         2;
     padding:                        10;
     transparency:                   "real";
-    width:                          170px;
-    location:                       center;
+    width:                          250px;
+    location:                       east;
     /*y-offset:                       18;*/
     /*x-offset:	                    850;*/
     transparency:                   "real";
-    width: 800px;
 }
 listview {
-    lines:                           1;
-    columns:                        4;
+    lines:                           4;
+    columns:                        1;
 }
 element {
     border:  0;
@@ -113,7 +112,7 @@ inputbar {
 }
 textbox-prompt-colon {
     expand:     false;
-    str:        "Set Power Profile:";
+    str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
