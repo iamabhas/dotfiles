@@ -1,5 +1,5 @@
 configuration {
-    font:                           "JetbrainsMono Nerd Font 12";
+    font:                           "JetbrainsMono Nerd Font Medium 12";
     show-icons:                     true;
     icon-theme: 		    "Tela circle purple dark";
     scroll-method:                  0;
@@ -14,15 +14,15 @@ window {
     border:                         2;
     border-color:                   @border-color;
     padding:                        10;
-    width:                          1000px;
-    location:                       center;
+    width:                          200px;
+    location:                       east;
 /*y-offset:                       18;*/
 /*x-offset:	                    850;*/
     transparency:                   "real";
 }
 listview {
-    lines:                          1;
-    columns:                        7;
+    lines:                          7;
+    columns:                        1;
     scrollbar:                     false;
 }
 element {
@@ -110,7 +110,7 @@ inputbar {
 }
 textbox-prompt-colon {
     expand:     false;
-    str:        "Power Menu:";
+    str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
