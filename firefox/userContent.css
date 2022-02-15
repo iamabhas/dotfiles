@@ -1,0 +1,17 @@
+/**************************** NEWTAB PAGE ****************************/
+@-moz-document url("about:home"), url("about:newtab") {
+	
+	
+	body {
+		background-image: url("bg.png");
+		background-size: cover;
+		--newtab-search-border-color: none !important;
+	}
+
+	/* Rounded searchbar */
+	.search-wrapper input {
+		border-radius: 5px !important;
+	}
+
+}
+/**************************** NEWTAB PAGE ****************************/
