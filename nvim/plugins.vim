@@ -6,4 +6,5 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 call plug#end()
