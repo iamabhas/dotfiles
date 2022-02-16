@@ -20,5 +20,5 @@
 
 ![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/browser.png)
 
-### Fonts to Download : [Iosevka NF](https://www.nerdfonts.com/font-downloads)
+### Fonts to Download  [Iosevka NF](https://www.nerdfonts.com/font-downloads)
 
