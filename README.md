@@ -12,6 +12,10 @@
 
 ![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvim.png)
 
+### RANGER + NVIM :
+
+![ranger+nvim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/ranger.png)
+
 ### FIREFOX :
 
 ![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/browser.png)
