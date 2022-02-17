@@ -2,7 +2,7 @@
 
 ### POLYBAR :
 
-![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/Polybar.png)
+![i3](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/bar.png)
 
 ### XFCE :
 
