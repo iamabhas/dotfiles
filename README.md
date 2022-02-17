@@ -10,7 +10,7 @@
 
 ### NEOVIM :
 
-![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvim.png)
+![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/vim.png)
 
 ### RANGER + NVIM :
 
