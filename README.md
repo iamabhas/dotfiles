@@ -22,7 +22,7 @@
 
 ### FIREFOX :
 
-![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/browser.png)
+![firefox](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/firefoxcss.png)
 
 ### Fonts to Download  [Iosevka NF](https://www.nerdfonts.com/font-downloads)
 
