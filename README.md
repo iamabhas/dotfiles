@@ -12,6 +12,10 @@
 
 ![neovim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/vim.png)
 
+### ROFI :
+
+![rofi](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/rofi.png)
+
 ### RANGER + NVIM :
 
 ![ranger+nvim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvimRanger.png)
