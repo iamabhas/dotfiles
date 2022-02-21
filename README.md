@@ -14,7 +14,7 @@
 
 ### RANGER + NVIM :
 
-![ranger+nvim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/ranger.png)
+![ranger+nvim](https://raw.githubusercontent.com/iamabhas/dotfiles/main/screenshots/nvimRanger.png)
 
 ### FIREFOX :
 
